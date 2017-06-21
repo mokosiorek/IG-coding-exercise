@@ -33,6 +33,26 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+    	String testA = new String("darrow ou lykos");
+    	String testAResult = new String("worrad uo sokyl");
+    	
+        assertTrue(testAResult.equals(WordReverser.reverseWords(testA)));
     }
+    
+    public void testAppBIsEmpty()
+    {
+    	String testB = new String("");
+    	String testBResult = new String("");
+    	
+        assertTrue(testBResult.equals(WordReverser.reverseWords(testB)));
+    }
+    
+    public void testAppCIsNull()
+    {
+    	String testC = null;
+    	String testCResult = new String("String is null");
+    	
+        assertTrue(testCResult.equals(WordReverser.reverseWords(testC)));
+    }
+    
 }
